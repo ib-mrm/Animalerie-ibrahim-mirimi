@@ -1,0 +1,23 @@
+{% load static %}
+<html>
+    <head>
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+        <link href="//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" href="{% static 'css/blog.css' %}">       
+        <title>L'animalerie d'Ibrahim</title>
+    </head>
+    <body>
+        <div class="page-header">
+            <h1><a href="/">Bienvenue dans l'animalerie d'Ibrahim!</a></h1>
+        </div>
+        <h3>Description des règles de fonctionnement de l'animalerie</h3>
+        <div class="grid-container">
+            {% for animal in animaux %}
+                <div class="grid-item"><h2><a href="">{{ animal.id_animal }}</a></h2></div>
+                <div class="grid-item"><p>{{ animal.lieu }}</p></div>
+                <div class="grid-item"><p>{{ animal.etat }}</p></div>  
+            {% endfor %}
+        </div>
+    </body>
+</html>
