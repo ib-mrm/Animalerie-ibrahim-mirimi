@@ -1,5 +1,8 @@
 from django.db import models
  
+
+
+
 class Equipement(models.Model):
     id_equip = models.CharField(max_length=100, primary_key=True)
     disponibilite = models.CharField(max_length=20)

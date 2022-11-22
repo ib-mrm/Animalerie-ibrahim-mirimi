@@ -1,3 +1,4 @@
+{% extends 'blog/base.html' %}
 {% load static %}
 <html>
     <head>
@@ -17,6 +18,7 @@
                 <div class="grid-item"><h2><a href="">{{ animal.id_animal }}</a></h2></div>
                 <div class="grid-item"><p>{{ animal.lieu }}</p></div>
                 <div class="grid-item"><p>{{ animal.etat }}</p></div>  
+                <a href="{% url 'animal_detail' id_animal=animal.id_animal %}">{{ animal.id_animal }}</a>
             {% endfor %}
         </div>
     </body>
